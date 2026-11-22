@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-CwOBXiIs.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bc8gev85.css">
+  <script type="module" crossorigin src="./assets/index-ZBzPKvQt.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DPKAJ8be.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -39,6 +39,14 @@
   </div>
   <div id="mission" role="status"></div>
 </aside>
-<footer><span>W/S throttle · A/D yaw · ↑/↓ pitch · ←/→ roll</span><span>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="./data/monywa-alon.json" download>ODbL map data</a> · <a href="./credits.txt">Credits</a></span></footer>
+<div id="touch-controls" role="group" aria-label="Mode 2 touch controls">
+  <div id="touch-left" class="touch-stick" aria-label="Left stick, throttle and yaw">
+    <span class="stick-thumb"></span><span class="stick-label">Throttle · Yaw</span>
+  </div>
+  <div id="touch-right" class="touch-stick" aria-label="Right stick, pitch and roll">
+    <span class="stick-thumb"></span><span class="stick-label">Pitch · Roll</span>
+  </div>
+</div>
+<footer><span class="keyboard-help">W/S throttle · A/D yaw · ↑/↓ pitch · ←/→ roll</span><span>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="./data/monywa-alon.json" download>ODbL map data</a> · <a href="./credits.txt">Credits</a></span></footer>
 </body>
 </html>
