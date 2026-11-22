@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-BNrFAwKp.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-b8VTWqYM.css">
+  <script type="module" crossorigin src="./assets/index-D56GIBz5.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Bc8gev85.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
 <header>
-  <div><strong>AGL SIM</strong><span>Chindwin River · Monywa</span></div>
+  <div><strong>AGL SIM</strong><span>Monywa · Clock Tower</span></div>
   <nav aria-label="Aircraft">
     <button id="drone" aria-pressed="true">FPV Drone</button>
     <button id="wing" aria-pressed="false">Delta Wing</button>
@@ -32,6 +32,10 @@
   <button id="view" aria-pressed="false">Third-person <kbd>V</kbd></button>
   <button id="mode">Angle</button>
   <button id="reset">Respawn <kbd>R</kbd></button>
+  <div id="launches" role="group" aria-label="Drone launch">
+    <button id="city" aria-pressed="true">Clock Tower</button>
+    <button id="course" aria-pressed="false">River gates</button>
+  </div>
   <div id="mission" role="status"></div>
 </aside>
 <footer><span>W/S throttle · A/D yaw · ↑/↓ pitch · ←/→ roll</span><span>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="./data/monywa.json" download>ODbL map data</a> · <a href="./credits.txt">Credits</a></span></footer>
