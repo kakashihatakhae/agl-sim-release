@@ -1,7 +1,14 @@
-Monywa map data © OpenStreetMap contributors, Open Database License 1.0.
+Monywa–Alon map data © OpenStreetMap contributors, Open Database License 1.0.
 Attribution and license: https://www.openstreetmap.org/copyright
-Adapted runtime database: data/monywa.json
+Adapted runtime database: data/monywa-alon.json
 Source map: https://www.openstreetmap.org/api/0.6/map?bbox=95.113,22.100,95.145,22.128
+Additional source maps:
+https://www.openstreetmap.org/api/0.6/map?bbox=95.096,22.100,95.143,22.133
+https://www.openstreetmap.org/api/0.6/map?bbox=95.075,22.129,95.128,22.155
+https://www.openstreetmap.org/api/0.6/map?bbox=95.063,22.151,95.114,22.177
+https://www.openstreetmap.org/api/0.6/map?bbox=95.057,22.173,95.104,22.200
+https://www.openstreetmap.org/api/0.6/map?bbox=95.055,22.196,95.103,22.222
+Alon Station: https://www.openstreetmap.org/node/8959996933
 River banks: https://www.openstreetmap.org/relation/6128737
 River source XML: https://www.openstreetmap.org/api/0.6/relation/6128737/full
 
