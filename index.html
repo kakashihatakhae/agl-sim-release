@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AGL Sim</title>
+  <script type="module" crossorigin src="./assets/index-ByXrm0CG.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CQBVs1r7.css">
+</head>
+<body>
+<main id="sim" aria-label="Flight simulator"></main>
+<header>
+  <div><strong>AGL SIM</strong><span>Chindwin River · Monywa</span></div>
+  <nav aria-label="Aircraft">
+    <button id="drone" aria-pressed="true">FPV Drone</button>
+    <button id="wing" aria-pressed="false">Delta Wing</button>
+    <button id="radio" aria-expanded="false">Transmitter</button>
+  </nav>
+</header>
+<div id="telemetry" aria-label="Flight telemetry"></div>
+<div class="reticle" aria-hidden="true">＋</div>
+<section id="radio-panel" hidden>
+  <h2>Mode 2 transmitter</h2>
+  <p id="device" role="status"></p>
+  <p>Plug in a USB transmitter and move a stick. Match the live axis numbers below.</p>
+  <output id="axes"></output>
+  <div id="mapping"></div>
+  <p>Center all sticks, including throttle, before capturing centers.</p>
+  <button id="center">Capture centers</button>
+</section>
+<aside>
+  <button id="mode">Angle</button>
+  <button id="reset">Respawn <kbd>R</kbd></button>
+  <div id="mission" role="status"></div>
+</aside>
+<footer><span>W/S throttle · A/D yaw · ↑/↓ pitch · ←/→ roll</span><span>Procedural scenery inspired by Monywa</span></footer>
+</body>
+</html>
