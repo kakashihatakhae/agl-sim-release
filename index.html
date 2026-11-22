@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-ByXrm0CG.js"></script>
+  <script type="module" crossorigin src="./assets/index-gl23ALSU.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-CQBVs1r7.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
   </nav>
 </header>
 <div id="telemetry" aria-label="Flight telemetry"></div>
-<div class="reticle" aria-hidden="true">＋</div>
+<div id="reticle" class="reticle" aria-hidden="true">＋</div>
 <section id="radio-panel" hidden>
   <h2>Mode 2 transmitter</h2>
   <p id="device" role="status"></p>
@@ -29,6 +29,7 @@
   <button id="center">Capture centers</button>
 </section>
 <aside>
+  <button id="view" aria-pressed="false">Third-person <kbd>V</kbd></button>
   <button id="mode">Angle</button>
   <button id="reset">Respawn <kbd>R</kbd></button>
   <div id="mission" role="status"></div>
