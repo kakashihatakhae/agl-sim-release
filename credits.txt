@@ -1,0 +1,12 @@
+Monywa map data © OpenStreetMap contributors, Open Database License 1.0.
+Attribution and license: https://www.openstreetmap.org/copyright
+Adapted runtime database: data/monywa.json
+Source map: https://www.openstreetmap.org/api/0.6/map?bbox=95.113,22.100,95.145,22.128
+River banks: https://www.openstreetmap.org/relation/6128737
+River source XML: https://www.openstreetmap.org/api/0.6/relation/6128737/full
+
+Monywa Clock Tower model is an adaptation of Monywa-d05.jpg by Colegota.
+The photo and adapted model are licensed CC BY-SA 2.5 Spain.
+Reference: https://commons.wikimedia.org/wiki/File:Monywa-d05.jpg
+License: https://creativecommons.org/licenses/by-sa/2.5/es/deed.en
+The reference photo is not included in the running simulator.
