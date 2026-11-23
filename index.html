@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-UD0com7D.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-K-6yQLfu.css">
+  <script type="module" crossorigin src="./assets/index-DKZZjrav.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BxprTv4z.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -60,6 +60,25 @@
 <dialog id="flight-plan" aria-labelledby="plan-title">
   <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" aria-label="Close flight plan">✕</button></div>
   <p id="recovery-message" hidden></p>
+  <section id="township-step" aria-labelledby="township-label">
+    <div class="township-heading">
+      <h2 id="township-label">Choose a township</h2>
+      <div id="township-scroll-buttons" hidden>
+        <button id="township-prev" type="button" aria-label="Previous townships">‹</button>
+        <button id="township-next" type="button" aria-label="Next townships">›</button>
+      </div>
+    </div>
+    <div id="township-cards" aria-label="Townships">
+      <button class="township-card monywa-card" id="choose-monywa" type="button">
+        <strong>Monywa Township</strong>
+        <span lang="my">မုံရွာမြို့နယ်</span>
+      </button>
+      <div class="township-card township-placeholder"><strong>AGL <em>SIM</em></strong><span>Coming soon</span></div>
+      <div class="township-card township-placeholder"><strong>AGL <em>SIM</em></strong><span>Coming soon</span></div>
+    </div>
+  </section>
+  <div id="launch-step" hidden>
+    <div class="township-selection"><strong>Monywa Township</strong><button id="back-townships" type="button">Change township</button></div>
   <fieldset><legend>Aircraft</legend>
     <div class="options">
       <button id="drone" aria-pressed="true">FPV Drone</button>
@@ -67,26 +86,33 @@
     </div>
   </fieldset>
   <fieldset><legend>Launch location</legend>
-  <div id="launches" class="options" role="group" aria-label="Launch location">
-    <button id="city" aria-pressed="true">Clock Tower</button>
-    <button id="course" aria-pressed="false">River gates</button>
-    <button id="pagoda" aria-pressed="false">Shwezegon</button>
-    <button id="roundabout" aria-pressed="false">Bogyoke Roundabout</button>
-    <button id="market" aria-pressed="false">Old Market</button>
-    <button id="bodhi" aria-pressed="false">Bodhi Tataung</button>
-    <button id="mauAle" aria-pressed="false">Mau Ale</button>
-    <button id="bridge" aria-pressed="false">Chindwin Bridge (Monywa)</button>
-    <button id="alon" aria-pressed="false">Alon</button>
-    <button id="airport" aria-pressed="false">Monywa Airport</button>
-    <button id="apron" aria-pressed="false">Airport Terminal</button>
-    <button id="strip" aria-pressed="false" hidden>West Bank Strip</button>
+  <div id="launches" aria-label="Launch location">
+    <div class="launch-region"><span>Monywa city</span><div class="options">
+      <button id="city" aria-pressed="true">Clock Tower</button>
+      <button id="pagoda" aria-pressed="false">Shwezegon</button>
+      <button id="roundabout" aria-pressed="false">Bogyoke Roundabout</button>
+      <button id="market" aria-pressed="false">Old Market</button>
+    </div></div>
+    <div class="launch-region"><span>Chindwin &amp; township</span><div class="options">
+      <button id="course" aria-pressed="false">River gates</button>
+      <button id="bodhi" aria-pressed="false">Bodhi Tataung</button>
+      <button id="mauAle" aria-pressed="false">Mau Ale</button>
+      <button id="bridge" aria-pressed="false">Chindwin Bridge (Monywa)</button>
+      <button id="alon" aria-pressed="false">Alon</button>
+    </div></div>
+    <div class="launch-region"><span>Airfields</span><div class="options">
+      <button id="airport" aria-pressed="false">Monywa Airport</button>
+      <button id="apron" aria-pressed="false">Airport Terminal</button>
+      <button id="strip" aria-pressed="false" hidden>West Bank Strip</button>
+    </div></div>
   </div>
   </fieldset>
   <fieldset class="fpv-settings"><legend>FPV camera</legend>
     <label>Camera angle <select id="fpv-tilt"><option value="auto">Auto</option></select></label>
     <label><input id="fpv-show-osd" type="checkbox" checked> Horizon and stick display</label>
   </fieldset>
-  <div class="plan-actions"><button id="plan-settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button><button id="fly" class="primary" autofocus>Start flight</button></div>
+  </div>
+  <div class="plan-actions"><button id="plan-settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button><button id="fly" class="primary" hidden>Start flight</button></div>
 </dialog>
 <dialog id="settings-dialog" aria-labelledby="settings-title">
   <div class="plan-header"><h1 id="settings-title">Settings</h1><button id="close-settings" aria-label="Close settings">✕</button></div>
