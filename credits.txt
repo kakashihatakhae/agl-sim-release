@@ -23,3 +23,13 @@ Bridge truss and pier visual reference: Chindwin Bridge.jpg by Long aung, CC BY-
 The stylized bridge model is available under CC BY-SA 3.0.
 Reference: https://commons.wikimedia.org/wiki/File:Chindwin_Bridge.jpg
 License: https://creativecommons.org/licenses/by-sa/3.0/
+
+Building estimates and additional footprints: 3D-GloBFP by Che et al. (2024),
+CC BY 4.0. Source data represents 2020 and its heights are model estimates.
+Dataset DOI: https://doi.org/10.5281/zenodo.15487037
+Paper DOI: https://doi.org/10.5194/essd-16-5357-2024
+Source tile 2006: https://figshare.com/articles/dataset/_/28904453
+License: https://creativecommons.org/licenses/by/4.0/
+Adapted layer: data/chindwin-gloBFP.json
+The source was clipped to the simulation area, projected to local coordinates,
+simplified, matched to existing OSM footprints, and rounded for runtime use.
