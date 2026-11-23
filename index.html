@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-BGEEgyYj.js"></script>
+  <script type="module" crossorigin src="./assets/index-BGHgp-Zb.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-c0_9vwCW.css">
 </head>
 <body>
@@ -71,6 +71,7 @@
   <div class="plan-header"><h1 id="settings-title">Settings</h1><button id="close-settings" aria-label="Close settings">✕</button></div>
   <div class="options settings-sections" role="group" aria-label="Settings sections">
     <button id="settings-radio" aria-pressed="true" aria-controls="radio-panel" autofocus>Radio</button>
+    <button id="settings-graphics" aria-pressed="false" aria-controls="graphics-settings">Graphics</button>
     <button id="settings-modes" aria-pressed="false" aria-controls="flight-mode-settings">Flight modes</button>
   </div>
 <section id="radio-panel" aria-label="Radio">
@@ -100,6 +101,12 @@
     <button id="center">Capture centers</button>
   </details>
 </section>
+  <fieldset id="graphics-settings" class="flight-mode-settings" hidden><legend>Graphics quality</legend>
+    <label>Quality <select id="graphics-quality">
+      <option value="auto">Auto</option><option value="performance">Performance</option><option value="quality">High quality</option>
+    </select></label>
+    <p id="graphics-status" role="status"></p>
+  </fieldset>
   <fieldset id="flight-mode-settings" class="flight-mode-settings" hidden><legend>Flight modes</legend>
     <label>Aircraft <select id="settings-aircraft"><option value="drone">FPV Drone</option><option value="wing">Delta Wing</option></select></label>
     <label>Controller profile <select id="mode-profile">
