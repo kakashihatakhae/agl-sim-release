@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-GMeBLJC6.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DtgbRBKd.css">
+  <script type="module" crossorigin src="./assets/index-4NEfMglN.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-C90cmD9r.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -69,9 +69,18 @@
       <button id="wing" aria-pressed="false">Delta Wing</button>
     </div>
   </fieldset>
-  <fieldset class="flight-mode-settings"><legend>Flight mode</legend>
-    <select id="flight-mode" aria-label="Flight mode" aria-describedby="flight-mode-hint"></select>
+  <fieldset class="flight-mode-settings"><legend>Flight modes</legend>
+    <label>Controller profile <select id="mode-profile">
+      <option value="betaflight">Betaflight</option><option value="arducopter">ArduPilot (ArduCopter)</option><option value="arduplane">ArduPlane</option>
+    </select></label>
+    <label>Active slot <select id="mode-slot"><option value="0">1</option><option value="1">2</option><option value="2">3</option></select></label>
+    <div class="mode-slots">
+      <label>Slot 1 <select id="mode-slot-1"></select></label>
+      <label>Slot 2 <select id="mode-slot-2"></select></label>
+      <label>Slot 3 <select id="mode-slot-3"></select></label>
+    </div>
     <p id="flight-mode-hint"></p>
+    <details id="mode-catalog"><summary>Mode catalog</summary><dl></dl></details>
   </fieldset>
   <fieldset><legend>Launch location</legend>
   <div id="launches" class="options" role="group" aria-label="Launch location">

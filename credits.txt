@@ -109,3 +109,9 @@ Adapted layer: data/monywa-airport.json
 Runway width and surface reference: OurAirports public domain runway data.
 https://github.com/davidmegginson/ourairports-data/blob/main/runways.csv
 Paint, terminal finishes and gate structures are approximate.
+
+Flight-mode names and behavior references:
+https://ardupilot.org/plane/docs/flight-modes.html
+https://ardupilot.org/copter/docs/flight-modes.html
+https://www.betaflight.com/docs/wiki/guides/current/Modes
+The simulator implements its own simplified flight controllers.
