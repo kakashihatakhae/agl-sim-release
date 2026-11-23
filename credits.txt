@@ -47,7 +47,9 @@ Adapted township 3D-GloBFP layer: data/township-heights.json and
 data/township-buildings/ (CC BY 4.0).
 
 Current conditions: Open-Meteo https://open-meteo.com/
-Weather data is used for the local-time sky, cloud cover and atmospheric visibility effects.
+Weather data is used for cloud cover and atmospheric visibility. Sun position
+is calculated from local date and coordinates. The sky, ripples and water
+reflections are rendered approximations.
 
 OpenStreetMap roundabouts and business locations: © OpenStreetMap contributors,
 ODbL 1.0. Shop labels reproduce map names and use original styling.
