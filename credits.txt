@@ -1,6 +1,6 @@
 Monywa–Alon map data © OpenStreetMap contributors, Open Database License 1.0.
 Attribution and license: https://www.openstreetmap.org/copyright
-Adapted runtime database: data/monywa-alon-bridge.json
+Adapted runtime database: data/chindwin-corridor.json
 Source map: https://www.openstreetmap.org/api/0.6/map?bbox=95.113,22.100,95.145,22.128
 Additional source maps:
 https://www.openstreetmap.org/api/0.6/map?bbox=95.096,22.100,95.143,22.133
