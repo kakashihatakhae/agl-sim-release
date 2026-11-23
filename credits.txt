@@ -110,7 +110,8 @@ https://www.openstreetmap.org/way/453995239
 Adapted layer: data/monywa-airport.json
 Runway width and surface reference: OurAirports public domain runway data.
 https://github.com/davidmegginson/ourairports-data/blob/main/runways.csv
-Paint, terminal finishes and gate structures are approximate.
+Paint, terminal finishes, apron stand markings and gate structures are approximate.
+Downtown lane markings and storefront details are illustrative and follow mapped streets and building footprints.
 
 Flight-mode names and behavior references:
 https://ardupilot.org/plane/docs/flight-modes.html
