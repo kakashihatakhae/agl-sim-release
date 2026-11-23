@@ -120,3 +120,7 @@ The simulator implements its own simplified flight controllers.
 
 Delta Wing airframe, propeller and elevons: supplied FX22-000_Feronix-2.2_Assembly.STEP.
 The exterior CAD components were tessellated to glTF for the simulator.
+
+Night scenery uses mapped OSM street-lamp positions where available.
+Supplementary road, window, landmark, bridge and runway lights are illustrative.
+Stars are procedural. Moon phase and position use a simplified orbital estimate.
