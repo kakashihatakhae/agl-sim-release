@@ -4,13 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-C4Rir5vr.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-ClnNvnru.css">
+  <script type="module" crossorigin src="./assets/index-Cxy_nf82.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BZIYX5MJ.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
 <header>
-  <div class="location-card"><strong>AGL <em>SIM</em></strong><span id="location">Monywa · Clock Tower</span><span id="weather" aria-label="Monywa weather and local time"></span><span id="wind" aria-label="Local wind" hidden></span></div>
+  <div class="location-card">
+    <div class="flight-card-title">
+      <strong>AGL <em>SIM</em></strong>
+      <div class="flight-icons">
+        <button id="view" type="button" aria-pressed="false" aria-label="Switch to third-person view" title="Third-person view (V)"><span class="camera-icon" aria-hidden="true"></span></button>
+        <button id="reset" type="button" aria-label="Choose respawn location" title="Respawn (R)"><span aria-hidden="true">↻</span></button>
+      </div>
+    </div>
+    <div class="aircraft-mode"><span id="aircraft-name">FPV Drone</span><button id="mode" type="button">Angle</button></div>
+    <span id="location">Monywa · Clock Tower</span>
+    <span id="weather" aria-label="Monywa weather and local time"></span>
+    <span id="wind" aria-label="Local wind" hidden></span>
+    <section id="telemetry" aria-label="Flight telemetry">
+      <div class="flight-metrics">
+        <div><span id="speed-label" class="metric-label">Speed</span><span id="flight-speed" class="metric-value">0</span> <small>m/s</small></div>
+        <div><span class="metric-label">Alt AGL</span><span id="flight-altitude" class="metric-value">0</span> <small>m</small></div>
+      </div>
+      <div class="flight-power">
+        <label class="metric-label" for="flight-throttle">Throttle</label><span id="flight-throttle-value">0%</span>
+        <progress id="flight-throttle" max="100" value="0"></progress><span id="flight-fps">0 FPS</span>
+      </div>
+      <div id="flight-status" hidden></div>
+    </section>
+  </div>
   <nav aria-label="Flight controls">
     <button id="settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button>
     <button id="plan" class="primary" aria-haspopup="dialog">Flight plan</button>
@@ -22,7 +45,6 @@
 </header>
 <div id="loading" role="status">Loading the Chindwin flight area…</div>
 <figure id="map-hud"><canvas id="minimap" width="200" height="200" aria-label="North-up local flight map"></canvas></figure>
-<div id="telemetry" aria-label="Flight telemetry"></div>
 <div id="reticle" class="reticle" aria-hidden="true"></div>
 <div id="fpv-osd" hidden aria-hidden="true">
   <div id="fpv-horizon"><span></span><span></span></div>
@@ -32,9 +54,6 @@
   </div>
 </div>
 <aside>
-  <button id="view" aria-pressed="false">Third-person <kbd>V</kbd></button>
-  <button id="mode">Angle</button>
-  <button id="reset">Respawn <kbd>R</kbd></button>
   <div id="mission" role="status"></div>
 </aside>
 <dialog id="flight-plan" aria-labelledby="plan-title">
