@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-DY8E5NqH.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DVoGxNfd.css">
+  <script type="module" crossorigin src="./assets/index-he0k-1kJ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BkF1BXDq.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -23,8 +23,15 @@
 <section id="radio-panel" hidden>
   <h2>Mode 2 transmitter</h2>
   <p id="device" role="status"></p>
-  <p>Plug in a USB transmitter and move a stick. Match the live axis numbers below.</p>
+  <p>Connect a USB data cable, select USB Joystick (HID), then move a stick or press a switch.</p>
+  <label>Controller <select id="radio-device" disabled></select></label>
+  <p id="radio-arming" role="status"></p>
   <output id="axes"></output>
+  <div class="options radio-buttons">
+    <button id="learn-radio" disabled>Map sticks</button>
+    <button id="capture-radio" hidden>Capture position</button>
+  </div>
+  <p id="radio-guide" role="status"></p>
   <div id="mapping"></div>
   <p>Center all sticks, including throttle, before capturing centers.</p>
   <button id="center">Capture centers</button>

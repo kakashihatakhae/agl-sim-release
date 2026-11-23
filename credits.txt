@@ -87,3 +87,14 @@ Source tile N21 E093. Land classes were resampled to the simulation grid and
 tree-cover pixels were aggregated to canopy percentages. Individual tree
 positions, species, and heights are illustrative.
 Adapted layer: data/monywa-topography.json
+
+Ground color and sampled water/vegetation color:
+Contains modified Copernicus Sentinel-2 data (2025–2026), processed by ESA.
+Source scenes S2C_46QGK_20261115_0_L2A and S2B_46QGK_20251125_0_L2A.
+Cloud and shadow pixels were replaced from the earlier scene. A small region
+with no valid imagery in either scene was interpolated from nearby pixels.
+Source access through Element 84 Earth Search and Sentinel-2 Cloud-Optimized GeoTIFFs.
+https://registry.opendata.aws/sentinel-2-l2a-cogs/
+https://www.copernicus.eu/en/access-data/copyright-and-licenses
+Adapted texture and registration: data/monywa-ground-colors.jpg and
+data/monywa-ground-colors.json.
