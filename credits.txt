@@ -1,6 +1,6 @@
 Monywa–Alon map data © OpenStreetMap contributors, Open Database License 1.0.
 Attribution and license: https://www.openstreetmap.org/copyright
-Adapted runtime database: data/monywa-alon.json
+Adapted runtime database: data/monywa-alon-bridge.json
 Source map: https://www.openstreetmap.org/api/0.6/map?bbox=95.113,22.100,95.145,22.128
 Additional source maps:
 https://www.openstreetmap.org/api/0.6/map?bbox=95.096,22.100,95.143,22.133
@@ -17,3 +17,9 @@ The photo and adapted model are licensed CC BY-SA 2.5 Spain.
 Reference: https://commons.wikimedia.org/wiki/File:Monywa-d05.jpg
 License: https://creativecommons.org/licenses/by-sa/2.5/es/deed.en
 The reference photo is not included in the running simulator.
+
+Chindwin Bridge alignment: https://www.openstreetmap.org/way/109743657
+Bridge truss and pier visual reference: Chindwin Bridge.jpg by Long aung, CC BY-SA 3.0.
+The stylized bridge model is available under CC BY-SA 3.0.
+Reference: https://commons.wikimedia.org/wiki/File:Chindwin_Bridge.jpg
+License: https://creativecommons.org/licenses/by-sa/3.0/
