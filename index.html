@@ -4,8 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-DKZZjrav.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BxprTv4z.css">
+<link rel="preload" as="image" href="./assets/monywa-hero-DA_DoOkt.webp">
+  <script type="module" crossorigin src="./assets/index-CyjVbMnw.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-MBGCdtts.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -61,6 +62,7 @@
   <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" aria-label="Close flight plan">✕</button></div>
   <p id="recovery-message" hidden></p>
   <section id="township-step" aria-labelledby="township-label">
+    <div class="township-brand" aria-label="AGL Sim">AGL <em>SIM</em></div>
     <div class="township-heading">
       <h2 id="township-label">Choose a township</h2>
       <div id="township-scroll-buttons" hidden>
@@ -72,6 +74,8 @@
       <button class="township-card monywa-card" id="choose-monywa" type="button">
         <strong>Monywa Township</strong>
         <span lang="my">မုံရွာမြို့နယ်</span>
+        <span class="township-sites">Clock Tower · Chindwin Bridge · Monywa Airport · Bodhi Tataung</span>
+        <span class="township-choose">Select township <span aria-hidden="true">→</span></span>
       </button>
       <div class="township-card township-placeholder"><strong>AGL <em>SIM</em></strong><span>Coming soon</span></div>
       <div class="township-card township-placeholder"><strong>AGL <em>SIM</em></strong><span>Coming soon</span></div>
