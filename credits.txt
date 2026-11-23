@@ -16,7 +16,8 @@ Monywa Clock Tower model is an adaptation of Monywa-d05.jpg by Colegota.
 The photo and adapted model are licensed CC BY-SA 2.5 Spain.
 Reference: https://commons.wikimedia.org/wiki/File:Monywa-d05.jpg
 License: https://creativecommons.org/licenses/by-sa/2.5/es/deed.en
-The reference photo is not included in the running simulator.
+The photo is also used as the Monywa Township card thumbnail, resized and
+encoded as WebP under CC BY-SA 2.5 Spain.
 
 Chindwin Bridge alignment: https://www.openstreetmap.org/way/109743657
 Bridge truss and pier visual reference: Chindwin Bridge.jpg by Long aung, CC BY-SA 3.0.
