@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-4NEfMglN.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-C90cmD9r.css">
+  <script type="module" crossorigin src="./assets/index-Do_UHuJh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BHJC6atd.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
 <header>
   <div class="location-card"><strong>AGL <em>SIM</em></strong><span id="location">Monywa · Clock Tower</span><span id="weather" aria-label="Monywa weather and local time"></span></div>
   <nav aria-label="Flight controls">
-    <button id="radio" aria-expanded="false" aria-controls="radio-panel">Radio</button>
+    <button id="settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button>
     <button id="plan" class="primary" aria-haspopup="dialog">Flight plan</button>
   </nav>
 </header>
@@ -27,7 +27,49 @@
     <div class="fpv-stick"><i id="fpv-input-right"></i></div>
   </div>
 </div>
-<section id="radio-panel" hidden>
+<aside>
+  <button id="view" aria-pressed="false">Third-person <kbd>V</kbd></button>
+  <button id="mode">Angle</button>
+  <button id="reset">Respawn <kbd>R</kbd></button>
+  <div id="mission" role="status"></div>
+</aside>
+<dialog id="flight-plan" aria-labelledby="plan-title">
+  <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" aria-label="Close flight plan">✕</button></div>
+  <p id="recovery-message" hidden></p>
+  <fieldset><legend>Aircraft</legend>
+    <div class="options">
+      <button id="drone" aria-pressed="true">FPV Drone</button>
+      <button id="wing" aria-pressed="false">Delta Wing</button>
+    </div>
+  </fieldset>
+  <fieldset><legend>Launch location</legend>
+  <div id="launches" class="options" role="group" aria-label="Launch location">
+    <button id="city" aria-pressed="true">Clock Tower</button>
+    <button id="course" aria-pressed="false">River gates</button>
+    <button id="pagoda" aria-pressed="false">Shwezegon</button>
+    <button id="roundabout" aria-pressed="false">Bogyoke Roundabout</button>
+    <button id="market" aria-pressed="false">Old Market</button>
+    <button id="bodhi" aria-pressed="false">Bodhi Tataung</button>
+    <button id="mauAle" aria-pressed="false">Mau Ale</button>
+    <button id="bridge" aria-pressed="false">Chindwin Bridge (Monywa)</button>
+    <button id="alon" aria-pressed="false">Alon</button>
+    <button id="airport" aria-pressed="false">Monywa Airport</button>
+    <button id="strip" aria-pressed="false" hidden>West Bank Strip</button>
+  </div>
+  </fieldset>
+  <fieldset class="fpv-settings"><legend>FPV camera</legend>
+    <label>Camera angle <select id="fpv-tilt"><option value="auto">Auto</option></select></label>
+    <label><input id="fpv-show-osd" type="checkbox" checked> Horizon and stick display</label>
+  </fieldset>
+  <div class="plan-actions"><button id="plan-settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button><button id="fly" class="primary" autofocus>Start flight</button></div>
+</dialog>
+<dialog id="settings-dialog" aria-labelledby="settings-title">
+  <div class="plan-header"><h1 id="settings-title">Settings</h1><button id="close-settings" aria-label="Close settings">✕</button></div>
+  <div class="options settings-sections" role="group" aria-label="Settings sections">
+    <button id="settings-radio" aria-pressed="true" aria-controls="radio-panel" autofocus>Radio</button>
+    <button id="settings-modes" aria-pressed="false" aria-controls="flight-mode-settings">Flight modes</button>
+  </div>
+<section id="radio-panel" aria-label="Radio">
   <h2>Mode 2 transmitter</h2>
   <p>Left stick: throttle ↑↓ and yaw ←→<br>Right stick: pitch ↑↓ and roll ←→</p>
   <p id="device" role="status"></p>
@@ -54,22 +96,8 @@
     <button id="center">Capture centers</button>
   </details>
 </section>
-<aside>
-  <button id="view" aria-pressed="false">Third-person <kbd>V</kbd></button>
-  <button id="mode">Angle</button>
-  <button id="reset">Respawn <kbd>R</kbd></button>
-  <div id="mission" role="status"></div>
-</aside>
-<dialog id="flight-plan" aria-labelledby="plan-title">
-  <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" aria-label="Close flight plan">✕</button></div>
-  <p id="recovery-message" hidden></p>
-  <fieldset><legend>Aircraft</legend>
-    <div class="options">
-      <button id="drone" aria-pressed="true">FPV Drone</button>
-      <button id="wing" aria-pressed="false">Delta Wing</button>
-    </div>
-  </fieldset>
-  <fieldset class="flight-mode-settings"><legend>Flight modes</legend>
+  <fieldset id="flight-mode-settings" class="flight-mode-settings" hidden><legend>Flight modes</legend>
+    <label>Aircraft <select id="settings-aircraft"><option value="drone">FPV Drone</option><option value="wing">Delta Wing</option></select></label>
     <label>Controller profile <select id="mode-profile">
       <option value="betaflight">Betaflight</option><option value="arducopter">ArduPilot (ArduCopter)</option><option value="arduplane">ArduPlane</option>
     </select></label>
@@ -82,26 +110,6 @@
     <p id="flight-mode-hint"></p>
     <details id="mode-catalog"><summary>Mode catalog</summary><dl></dl></details>
   </fieldset>
-  <fieldset><legend>Launch location</legend>
-  <div id="launches" class="options" role="group" aria-label="Launch location">
-    <button id="city" aria-pressed="true">Clock Tower</button>
-    <button id="course" aria-pressed="false">River gates</button>
-    <button id="pagoda" aria-pressed="false">Shwezegon</button>
-    <button id="roundabout" aria-pressed="false">Bogyoke Roundabout</button>
-    <button id="market" aria-pressed="false">Old Market</button>
-    <button id="bodhi" aria-pressed="false">Bodhi Tataung</button>
-    <button id="mauAle" aria-pressed="false">Mau Ale</button>
-    <button id="bridge" aria-pressed="false">Chindwin Bridge (Monywa)</button>
-    <button id="alon" aria-pressed="false">Alon</button>
-    <button id="airport" aria-pressed="false">Monywa Airport</button>
-    <button id="strip" aria-pressed="false" hidden>West Bank Strip</button>
-  </div>
-  </fieldset>
-  <fieldset class="fpv-settings"><legend>FPV camera</legend>
-    <label>Camera angle <select id="fpv-tilt"><option value="auto">Auto</option></select></label>
-    <label><input id="fpv-show-osd" type="checkbox" checked> Horizon and stick display</label>
-  </fieldset>
-  <div class="plan-actions"><button id="fly" class="primary" autofocus>Start flight</button></div>
 </dialog>
 <div id="touch-controls" role="group" aria-label="Mode 2 touch controls">
   <div id="touch-left" class="touch-stick" aria-label="Left stick, throttle and yaw">
