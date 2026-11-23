@@ -115,3 +115,6 @@ https://ardupilot.org/plane/docs/flight-modes.html
 https://ardupilot.org/copter/docs/flight-modes.html
 https://www.betaflight.com/docs/wiki/guides/current/Modes
 The simulator implements its own simplified flight controllers.
+
+Delta Wing airframe and propeller: supplied feronix_model.stl.
+Converted to glTF and adapted with hinged elevons for the simulator.
