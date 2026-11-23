@@ -4,19 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-BDRk5olR.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DPKAJ8be.css">
+  <script type="module" crossorigin src="./assets/index-B7xkIECi.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CJGjF230.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
 <header>
-  <div><strong>AGL SIM</strong><span id="location">Monywa · Clock Tower</span></div>
-  <nav aria-label="Aircraft">
-    <button id="drone" aria-pressed="true">FPV Drone</button>
-    <button id="wing" aria-pressed="false">Delta Wing</button>
-    <button id="radio" aria-expanded="false">Transmitter</button>
+  <div class="location-card"><strong>AGL <em>SIM</em></strong><span id="location">Monywa · Clock Tower</span></div>
+  <nav aria-label="Flight controls">
+    <button id="radio" aria-expanded="false" aria-controls="radio-panel">Radio</button>
+    <button id="plan" class="primary" aria-haspopup="dialog">Flight plan</button>
   </nav>
 </header>
+<div id="loading" role="status">Loading the Chindwin flight area…</div>
+<figure id="map-hud"><canvas id="minimap" width="200" height="200" aria-label="North-up local flight map"></canvas><figcaption id="heading" aria-label="Heading"></figcaption></figure>
 <div id="telemetry" aria-label="Flight telemetry"></div>
 <div id="reticle" class="reticle" aria-hidden="true">＋</div>
 <section id="radio-panel" hidden>
@@ -32,15 +33,27 @@
   <button id="view" aria-pressed="false">Third-person <kbd>V</kbd></button>
   <button id="mode">Angle</button>
   <button id="reset">Respawn <kbd>R</kbd></button>
-  <div id="launches" role="group" aria-label="Launch location">
+  <div id="mission" role="status"></div>
+</aside>
+<dialog id="flight-plan" aria-labelledby="plan-title">
+  <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" aria-label="Close flight plan">✕</button></div>
+  <fieldset><legend>Aircraft</legend>
+    <div class="options">
+      <button id="drone" aria-pressed="true">FPV Drone</button>
+      <button id="wing" aria-pressed="false">Delta Wing</button>
+    </div>
+  </fieldset>
+  <fieldset><legend>Launch location</legend>
+  <div id="launches" class="options" role="group" aria-label="Launch location">
     <button id="city" aria-pressed="true">Clock Tower</button>
     <button id="course" aria-pressed="false">River gates</button>
     <button id="bridge" aria-pressed="false">Bridge</button>
     <button id="alon" aria-pressed="false">Alon</button>
     <button id="strip" aria-pressed="false" hidden>West Bank Strip</button>
   </div>
-  <div id="mission" role="status"></div>
-</aside>
+  </fieldset>
+  <div class="plan-actions"><button id="fly" class="primary" autofocus>Start flight</button></div>
+</dialog>
 <div id="touch-controls" role="group" aria-label="Mode 2 touch controls">
   <div id="touch-left" class="touch-stick" aria-label="Left stick, throttle and yaw">
     <span class="stick-thumb"></span><span class="stick-label">Throttle · Yaw</span>
