@@ -75,3 +75,15 @@ provided under Copernicus by the European Union and ESA.
 Contains modified Copernicus DEM data. Cropped, reprojected, and blended into
 the simulation terrain. The DSM surface was reduced near the modeled statues.
 https://registry.opendata.aws/copernicus-dem/
+
+Township and Chindwin terrain: Copernicus DEM GLO-30 source tiles N21 E095 and
+N22 E095, resampled and converted to a common simulation vertical datum.
+https://registry.opendata.aws/copernicus-dem/
+
+ESA WorldCover 10 m 2021 v200 by Zanaga et al., CC BY 4.0.
+https://doi.org/10.5281/zenodo.7254221
+https://creativecommons.org/licenses/by/4.0/
+Source tile N21 E093. Land classes were resampled to the simulation grid and
+tree-cover pixels were aggregated to canopy percentages. Individual tree
+positions, species, and heights are illustrative.
+Adapted layer: data/monywa-topography.json
