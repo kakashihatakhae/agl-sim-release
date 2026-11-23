@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-VC3ZomZm.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CuU_aT0x.css">
+  <script type="module" crossorigin src="./assets/index-DwPHUnp4.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BxpuQLM5.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -26,17 +26,21 @@
   <p id="device" role="status"></p>
   <p>Connect a USB data cable, select USB Joystick (HID), then move a stick or press a switch.</p>
   <label>Controller <select id="radio-device" disabled></select></label>
-  <p id="radio-channels" hidden></p>
+  <div id="radio-raw-channels" hidden aria-label="Detected USB axes"></div>
+  <div id="radio-channels" hidden aria-label="Live control channels"></div>
   <p id="radio-arming" role="status"></p>
-  <output id="axes"></output>
   <div class="options radio-buttons">
     <button id="learn-radio" disabled>Calibrate joystick</button>
-    <button id="capture-radio" hidden>Start 3-second timer</button>
+    <button id="capture-radio" hidden>Sticks ready</button>
   </div>
   <p id="radio-guide" role="status"></p>
-  <div id="mapping"></div>
-  <p>Center all sticks, including throttle, before capturing centers.</p>
-  <button id="center">Capture centers</button>
+  <details id="radio-advanced">
+    <summary>Advanced axis settings</summary>
+    <output id="axes"></output>
+    <div id="mapping"></div>
+    <p>Release yaw, pitch and roll before capturing centers.</p>
+    <button id="center">Capture centers</button>
+  </details>
 </section>
 <aside>
   <button id="view" aria-pressed="false">Third-person <kbd>V</kbd></button>
