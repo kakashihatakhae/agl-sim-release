@@ -45,3 +45,6 @@ Supplemental Myanmar extract: https://download.openstreetmap.fr/extracts/asia/my
 Adapted township OSM layer: data/monywa-township.json (ODbL 1.0)
 Adapted township 3D-GloBFP layer: data/township-heights.json and
 data/township-buildings/ (CC BY 4.0).
+
+Current conditions: Open-Meteo https://open-meteo.com/
+Weather data is used for the local-time sky, cloud cover and atmospheric visibility effects.
