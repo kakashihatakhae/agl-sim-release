@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
 <link rel="preload" as="image" href="./assets/monywa-hero-DA_DoOkt.webp">
-  <script type="module" crossorigin src="./assets/index-DM1S3Baw.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DBKKwFs8.css">
+  <script type="module" crossorigin src="./assets/index-D32n1ANh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-rXX2GzEo.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -37,7 +37,7 @@
     </section>
   </div>
   <nav aria-label="Flight controls">
-    <button id="settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button>
+    <button id="settings" class="settings-icon-button" type="button" aria-haspopup="dialog" aria-controls="settings-dialog" aria-label="Settings" title="Settings"><span class="settings-gear" aria-hidden="true"></span></button>
     <button id="plan" class="primary" aria-haspopup="dialog">Flight plan</button>
   </nav>
   <div id="compass-hud" aria-label="Flight heading" hidden>
@@ -72,7 +72,7 @@
     </div>
     <div id="township-cards" aria-label="Townships">
       <button class="township-card monywa-card" id="choose-monywa" type="button">
-        <img id="township-preview" src="./assets/monywa-clock-card-BGStbexL.webp" width="520" height="390" alt="Monywa Clock Tower">
+        <img id="township-preview" src="./assets/monywa-clock-card-CT7q2eTp.webp" width="600" height="300" alt="Monywa Clock Tower in AGL Sim">
         <strong>Monywa Township</strong>
         <span lang="my">မုံရွာမြို့နယ်</span>
         <span class="township-sites">Clock Tower · Chindwin Bridge · Monywa Airport · Bodhi Tataung</span>
@@ -117,7 +117,7 @@
     <label><input id="fpv-show-osd" type="checkbox" checked> Horizon and stick display</label>
   </fieldset>
   </div>
-  <div class="plan-actions"><button id="plan-settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button><button id="fly" class="primary" hidden>Start flight</button></div>
+  <div class="plan-actions"><button id="plan-settings" class="settings-icon-button" type="button" aria-haspopup="dialog" aria-controls="settings-dialog" aria-label="Settings" title="Settings"><span class="settings-gear" aria-hidden="true"></span></button><button id="fly" class="primary" hidden>Start flight</button></div>
 </dialog>
 <dialog id="settings-dialog" aria-labelledby="settings-title">
   <div class="plan-header"><h1 id="settings-title">Settings</h1><button id="close-settings" aria-label="Close settings">✕</button></div>
