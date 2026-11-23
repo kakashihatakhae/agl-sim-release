@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-95R-w6Ub.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Doqq5yEX.css">
+  <script type="module" crossorigin src="./assets/index-GMeBLJC6.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DtgbRBKd.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -68,6 +68,10 @@
       <button id="drone" aria-pressed="true">FPV Drone</button>
       <button id="wing" aria-pressed="false">Delta Wing</button>
     </div>
+  </fieldset>
+  <fieldset class="flight-mode-settings"><legend>Flight mode</legend>
+    <select id="flight-mode" aria-label="Flight mode" aria-describedby="flight-mode-hint"></select>
+    <p id="flight-mode-hint"></p>
   </fieldset>
   <fieldset><legend>Launch location</legend>
   <div id="launches" class="options" role="group" aria-label="Launch location">
