@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-DwPHUnp4.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BxpuQLM5.css">
+  <script type="module" crossorigin src="./assets/index-CsxbrZPQ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B3wvq16W.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -19,7 +19,14 @@
 <div id="loading" role="status">Loading the Chindwin flight area…</div>
 <figure id="map-hud"><canvas id="minimap" width="200" height="200" aria-label="North-up local flight map"></canvas><figcaption id="heading" aria-label="Heading"></figcaption></figure>
 <div id="telemetry" aria-label="Flight telemetry"></div>
-<div id="reticle" class="reticle" aria-hidden="true">＋</div>
+<div id="reticle" class="reticle" aria-hidden="true"></div>
+<div id="fpv-osd" hidden aria-hidden="true">
+  <div id="fpv-horizon"><span></span><span></span></div>
+  <div class="fpv-inputs">
+    <div class="fpv-stick"><i id="fpv-input-left"></i></div>
+    <div class="fpv-stick"><i id="fpv-input-right"></i></div>
+  </div>
+</div>
 <section id="radio-panel" hidden>
   <h2>Mode 2 transmitter</h2>
   <p>Left stick: throttle ↑↓ and yaw ←→<br>Right stick: pitch ↑↓ and roll ←→</p>
@@ -71,6 +78,10 @@
     <button id="airport" aria-pressed="false">Monywa Airport</button>
     <button id="strip" aria-pressed="false" hidden>West Bank Strip</button>
   </div>
+  </fieldset>
+  <fieldset class="fpv-settings"><legend>FPV camera</legend>
+    <label>Camera angle <select id="fpv-tilt"><option value="auto">Auto</option></select></label>
+    <label><input id="fpv-show-osd" type="checkbox" checked> Horizon and stick display</label>
   </fieldset>
   <div class="plan-actions"><button id="fly" class="primary" autofocus>Start flight</button></div>
 </dialog>
