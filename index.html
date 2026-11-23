@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
-  <script type="module" crossorigin src="./assets/index-yOHII50O.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BHJC6atd.css">
+  <script type="module" crossorigin src="./assets/index-CwnsCZfy.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DoCpc-Md.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -15,6 +15,10 @@
     <button id="settings" aria-haspopup="dialog" aria-controls="settings-dialog">Settings</button>
     <button id="plan" class="primary" aria-haspopup="dialog">Flight plan</button>
   </nav>
+  <div id="compass-hud" aria-label="Flight heading" hidden>
+    <div id="compass-tape" aria-hidden="true"></div>
+    <output id="compass-bearing" aria-label="Heading in degrees" aria-live="off"></output>
+  </div>
 </header>
 <div id="loading" role="status">Loading the Chindwin flight area…</div>
 <figure id="map-hud"><canvas id="minimap" width="200" height="200" aria-label="North-up local flight map"></canvas><figcaption id="heading" aria-label="Heading"></figcaption></figure>
