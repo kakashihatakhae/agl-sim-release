@@ -48,3 +48,30 @@ data/township-buildings/ (CC BY 4.0).
 
 Current conditions: Open-Meteo https://open-meteo.com/
 Weather data is used for the local-time sky, cloud cover and atmospheric visibility effects.
+
+OpenStreetMap roundabouts and business locations: © OpenStreetMap contributors,
+ODbL 1.0. Shop labels reproduce map names and use original styling.
+Bogyoke statue location: https://www.openstreetmap.org/node/597164740
+Standing Buddha location and dimensions: https://www.openstreetmap.org/node/1256618684
+Reclining Buddha location: https://www.openstreetmap.org/node/1256696694
+Bodhi data source: https://www.openstreetmap.org/api/0.6/map?bbox=95.273,22.071,95.302,22.091
+
+Works used as visual references for the original 3D interpretations:
+- Laykyun Setkyar 01 (cropped).jpg and Laykyun Setkyar 04.jpg by LBM1948, CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:Laykyun_Setkyar_01_(cropped).jpg
+  https://commons.wikimedia.org/wiki/File:Laykyun_Setkyar_04.jpg
+- BodhiOneThousandStandingAndRecliningBuddha.jpg by Zawthet, CC BY-SA 4.0
+  https://commons.wikimedia.org/wiki/File:BodhiOneThousandStandingAndRecliningBuddha.jpg
+- Monywa-d06.jpg by Colegota, CC BY-SA 2.5 Spain
+  https://commons.wikimedia.org/wiki/File:Monywa-d06.jpg
+
+Bodhi models: CC BY-SA 4.0. Bogyoke model: CC BY-SA 2.5 Spain.
+https://creativecommons.org/licenses/by-sa/4.0/
+https://creativecommons.org/licenses/by-sa/2.5/es/deed.en
+
+Bodhi Tataung terrain: Copernicus DEM GLO-30, source tile N22 E095.
+© DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018,
+provided under Copernicus by the European Union and ESA.
+Contains modified Copernicus DEM data. Cropped, reprojected, and blended into
+the simulation terrain. The DSM surface was reduced near the modeled statues.
+https://registry.opendata.aws/copernicus-dem/
