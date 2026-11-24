@@ -146,3 +146,11 @@ https://doi.org/10.5281/zenodo.15487037
 Source tiles: https://figshare.com/articles/dataset/_/28903853 and https://figshare.com/articles/dataset/_/28904453
 Adapted layer: data/mawlaik-building-detail.json. Roofs and facade finishes are illustrative.
 War Yon Thar launch references OSM node 12872570857.
+
+
+Mawlaik landmark geometry is approximate. The riverside stair pavilion and south road bridge
+were modeled using 2016 photos by mohigan, CC BY-SA 3.0 (photos used as references only):
+https://commons.wikimedia.org/wiki/File:Mawlaik,_Myanmar_(Burma)_-_panoramio_(4).jpg
+https://commons.wikimedia.org/wiki/File:Unnamed_Road,_Mawlaik,_Myanmar_(Burma)_-_panoramio_(1).jpg
+Bridge alignment, market area and four mapped Buddhist sites: OpenStreetMap contributors, ODbL 1.0.
+The Buddhist sites use illustrative stupa profiles. The market shell is an interpretation of a nearby mapped footprint.
