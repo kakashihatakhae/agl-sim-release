@@ -130,3 +130,6 @@ The exterior CAD components were tessellated to glTF for the simulator.
 Night scenery uses mapped OSM street-lamp positions where available.
 Supplementary road, window, landmark, bridge and runway lights are illustrative.
 Stars are procedural. Moon phase and position use a simplified orbital estimate.
+
+Minimap settlement names: © OpenStreetMap contributors, ODbL 1.0.
+The စနခ ၇၄၇ label is positioned approximately using the user-supplied map screenshot.
