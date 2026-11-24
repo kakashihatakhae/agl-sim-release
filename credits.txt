@@ -112,7 +112,7 @@ https://www.openstreetmap.org/way/976894118
 Adapted layer: data/monywa-airport.json
 Runway width and surface reference: OurAirports public domain runway data.
 https://github.com/davidmegginson/ourairports-data/blob/main/runways.csv
-Paint, terminal finishes, apron joints and stands, parking markings and gate structures are approximate.
+Paint, runway shoulder widths, terminal finishes, apron joints and stands, service-road finishes, parking markings and gate structures are approximate.
 Downtown lane markings and storefront details are illustrative and follow mapped streets and building footprints.
 
 Flight-mode names and behavior references:
