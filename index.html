@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
 <link rel="preload" as="image" href="./assets/agl-promo-poster-C0U3LhY2.webp">
-  <script type="module" crossorigin src="./assets/index-BcWGSn4_.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B9HU-gk9.css">
+  <script type="module" crossorigin src="./assets/index-CBrFuVl6.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BqoYfclo.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -38,7 +38,7 @@
   </div>
   <nav aria-label="Flight controls">
     <button id="settings" class="settings-icon-button" type="button" aria-haspopup="dialog" aria-controls="settings-dialog" aria-label="Settings" title="Settings"><span class="settings-gear" aria-hidden="true"></span></button>
-    <button id="plan" class="primary" aria-haspopup="dialog">Flight plan</button>
+    <button id="plan" aria-haspopup="dialog"><span class="plan-icon" aria-hidden="true"></span> Flight plan</button>
   </nav>
   <div id="compass-hud" aria-label="Flight heading" hidden>
     <div id="compass-tape" aria-hidden="true"></div>
@@ -58,10 +58,13 @@
   <div id="mission" role="status"></div>
 </aside>
 <dialog id="flight-plan" class="township-hero" aria-labelledby="plan-title" closedby="none" open>
-  <div id="loading" role="status">Loading the Chindwin flight area…</div>
+  <div id="loading" role="status">Loading flight data…</div>
   <video id="township-promo" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
-  <button id="township-promo-toggle" type="button" aria-label="Pause background video" title="Pause background video" hidden><span aria-hidden="true">Ⅱ</span></button>
-  <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" hidden aria-label="Close flight plan">✕</button></div>
+  <div id="township-tools">
+    <button id="township-music" class="utility-button" type="button" aria-label="Menu music" aria-pressed="false" title="Menu music" disabled><span aria-hidden="true">♫</span></button>
+    <button id="township-promo-toggle" class="utility-button" type="button" aria-label="Pause background video" title="Pause background video" hidden><span class="playback-icon" aria-hidden="true"></span></button>
+  </div>
+  <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" hidden aria-label="Close flight plan"><span class="close-icon" aria-hidden="true"></span></button></div>
   <p id="recovery-message" hidden></p>
   <section id="township-step" aria-labelledby="township-label">
     <div class="township-brand" aria-label="AGL Sim">AGL <em>SIM</em></div>
@@ -122,7 +125,7 @@
   <div class="plan-actions"><button id="plan-settings" class="settings-icon-button" type="button" aria-haspopup="dialog" aria-controls="settings-dialog" aria-label="Settings" title="Settings"><span class="settings-gear" aria-hidden="true"></span></button><button id="fly" class="primary" hidden>Start flight</button></div>
 </dialog>
 <dialog id="settings-dialog" aria-labelledby="settings-title">
-  <div class="plan-header"><h1 id="settings-title">Settings</h1><button id="close-settings" aria-label="Close settings">✕</button></div>
+  <div class="plan-header"><h1 id="settings-title">Settings</h1><button id="close-settings" aria-label="Close settings"><span class="close-icon" aria-hidden="true"></span></button></div>
   <div class="options settings-sections" role="group" aria-label="Settings sections">
     <button id="settings-radio" aria-pressed="true" aria-controls="radio-panel" autofocus>Radio</button>
     <button id="settings-graphics" aria-pressed="false" aria-controls="graphics-settings">Graphics</button>
@@ -156,8 +159,10 @@
     <button id="center">Capture centers</button>
   </details>
 </section>
-  <fieldset id="audio-settings" hidden><legend>Flight audio</legend>
-    <label><input id="flight-audio" type="checkbox" checked> Enable flight sounds</label>
+  <fieldset id="audio-settings" hidden><legend>Sound</legend>
+    <label><input id="flight-audio" type="checkbox" checked> Aircraft and wind</label>
+    <label><input id="ui-audio" type="checkbox" checked> Menu sound effects</label>
+    <label><input id="menu-music" type="checkbox"> Menu music</label>
   </fieldset>
   <fieldset id="graphics-settings" class="flight-mode-settings" hidden><legend>Graphics quality</legend>
     <label>Quality <select id="graphics-quality">
