@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
 <link rel="preload" as="image" href="./assets/agl-promo-poster-C0U3LhY2.webp">
-  <script type="module" crossorigin src="./assets/index-DSLSbtHb.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BMfzQJRE.css">
+  <script type="module" crossorigin src="./assets/index-TZYAmBnP.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Ca9qzKOf.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
@@ -22,7 +22,7 @@
     </div>
     <div class="aircraft-mode"><span id="aircraft-name">FPV Drone</span><button id="mode" type="button">Angle</button></div>
     <span id="location">Monywa · Clock Tower</span>
-    <span id="weather" aria-label="Monywa weather and local time"></span>
+    <span id="weather" aria-label="Local weather and time"></span>
     <span id="wind" aria-label="Local wind" hidden></span>
     <section id="telemetry" aria-label="Flight telemetry">
       <div class="flight-metrics">
@@ -85,18 +85,24 @@
     </div>
     <div id="township-cards" aria-label="Townships">
       <button class="township-card monywa-card" id="choose-monywa" type="button" disabled>
-        <img id="township-preview" src="./assets/monywa-clock-card-CT7q2eTp.webp" width="600" height="300" alt="Monywa Clock Tower in AGL Sim">
+        <img class="township-preview" id="township-preview" src="./assets/monywa-clock-card-CT7q2eTp.webp" width="600" height="300" alt="Monywa Clock Tower in AGL Sim">
         <strong>Monywa Township</strong>
         <span lang="my">မုံရွာမြို့နယ်</span>
         <span class="township-sites">Clock Tower · Chindwin Bridge · Monywa Airport · Bodhi Tataung</span>
         <span class="township-choose">Select township <span aria-hidden="true">→</span></span>
       </button>
-      <div class="township-card township-placeholder"><strong>AGL <em>SIM</em></strong><span>Coming soon</span></div>
+      <button class="township-card monywa-card" id="choose-mawlaik" type="button" disabled>
+        <img class="township-preview" src="./assets/mawlaik-town-card-CUMt_yoI.webp" width="640" height="320" alt="Mawlaik and the Chindwin River in AGL Sim">
+        <strong>Mawlaik Township</strong>
+        <span lang="my">မော်လိုက်မြို့နယ်</span>
+        <span class="township-sites">Town · Chindwin riverfront</span>
+        <span class="township-choose">Select township <span aria-hidden="true">→</span></span>
+      </button>
       <div class="township-card township-placeholder"><strong>AGL <em>SIM</em></strong><span>Coming soon</span></div>
     </div>
   </section>
   <div id="launch-step" hidden>
-    <div class="township-selection"><strong>Monywa Township</strong><button id="back-townships" type="button">Change township</button></div>
+    <div class="township-selection"><strong id="planned-township">Monywa Township</strong><button id="back-townships" type="button">Change township</button></div>
   <fieldset><legend>Aircraft</legend>
     <div class="options">
       <button id="drone" aria-pressed="true">FPV Drone</button>
@@ -105,6 +111,7 @@
   </fieldset>
   <fieldset><legend>Launch location</legend>
   <div id="launches" aria-label="Launch location">
+    <div id="monywa-launches">
     <div class="launch-region"><span>Monywa city</span><div class="options">
       <button id="city" aria-pressed="true">Clock Tower</button>
       <button id="pagoda" aria-pressed="false">Shwezegon</button>
@@ -123,6 +130,11 @@
       <button id="apron" aria-pressed="false">Airport Terminal</button>
       <button id="strip" aria-pressed="false" hidden>West Bank Strip</button>
     </div></div>
+    </div>
+    <div id="mawlaik-launches" class="options" hidden>
+      <button id="mawlaikTown" aria-pressed="false">Mawlaik Town</button>
+      <button id="mawlaikRiver" aria-pressed="false">Chindwin Riverfront</button>
+    </div>
   </div>
   </fieldset>
   <fieldset class="fpv-settings"><legend>FPV camera</legend>

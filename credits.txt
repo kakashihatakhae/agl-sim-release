@@ -133,3 +133,9 @@ Stars are procedural. Moon phase and position use a simplified orbital estimate.
 
 Minimap settlement names: © OpenStreetMap contributors, ODbL 1.0.
 The စနခ ၇၄၇ label is positioned approximately using the user-supplied map screenshot.
+
+
+Mawlaik preview streets, river polygons, settlement names and building footprints:
+© OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright
+Mawlaik elevation: Copernicus DEM GLO-30, tile N23 E094, resampled in the simulator.
+Mawlaik land cover: ESA WorldCover 2021 v200. Tree placement and building heights are illustrative.
