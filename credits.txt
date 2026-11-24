@@ -100,6 +100,8 @@ https://registry.opendata.aws/sentinel-2-l2a-cogs/
 https://www.copernicus.eu/en/access-data/copyright-and-licenses
 Adapted texture and registration: data/monywa-ground-colors.jpg and
 data/monywa-ground-colors.json.
+The optional minimap uses a finer Sentinel-2 tiles (data/minimap/),
+registered to the same bounds.
 
 Monywa Airport runway alignment, apron, terminal footprint, perimeter and
 mapped entrance locations and terminal parking: © OpenStreetMap contributors, ODbL 1.0.
@@ -109,6 +111,7 @@ https://www.openstreetmap.org/way/109849661
 https://www.openstreetmap.org/way/453995239
 https://www.openstreetmap.org/way/976894117
 https://www.openstreetmap.org/way/976894118
+Nearby sports field footprint: https://www.openstreetmap.org/way/109849663
 Adapted layer: data/monywa-airport.json
 Runway width and surface reference: OurAirports public domain runway data.
 https://github.com/davidmegginson/ourairports-data/blob/main/runways.csv
