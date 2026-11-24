@@ -140,3 +140,9 @@ https://www.openstreetmap.org/relation/5996707
 © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright
 Mawlaik elevation: Copernicus DEM GLO-30, tiles N23–N24 E094–E095, resampled for the township and town centre.
 Mawlaik land cover: ESA WorldCover 2021 v200. Tree placement and building heights are illustrative.
+
+Mawlaik additional building footprints and estimated heights: 3D-GloBFP by Che et al., CC BY 4.0.
+https://doi.org/10.5281/zenodo.15487037
+Source tiles: https://figshare.com/articles/dataset/_/28903853 and https://figshare.com/articles/dataset/_/28904453
+Adapted layer: data/mawlaik-building-detail.json. Roofs and facade finishes are illustrative.
+War Yon Thar launch references OSM node 12872570857.
