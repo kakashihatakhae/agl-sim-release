@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>AGL Sim</title>
 <link rel="preload" as="image" href="./assets/agl-promo-poster-C0U3LhY2.webp">
-  <script type="module" crossorigin src="./assets/index-DY5ybsP8.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-C8Bz0nQI.css">
+  <script type="module" crossorigin src="./assets/index-ZtBbw4fQ.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-D0BoegqI.css">
 </head>
 <body>
 <main id="sim" aria-label="Flight simulator"></main>
-<header>
+<header data-flight-ui>
   <div class="location-card">
     <div class="flight-card-title">
       <strong>AGL <em>SIM</em></strong>
@@ -45,9 +45,8 @@
     <output id="compass-bearing" aria-label="Heading in degrees" aria-live="off"></output>
   </div>
 </header>
-<div id="loading" role="status">Loading the Chindwin flight area…</div>
-<figure id="map-hud"><canvas id="minimap" width="200" height="200" aria-label="North-up local flight map"></canvas></figure>
-<div id="reticle" class="reticle" aria-hidden="true"></div>
+<figure id="map-hud" data-flight-ui><canvas id="minimap" width="200" height="200" aria-label="North-up local flight map"></canvas></figure>
+<div id="reticle" class="reticle" data-flight-ui aria-hidden="true"></div>
 <div id="fpv-osd" hidden aria-hidden="true">
   <div id="fpv-horizon"><span></span><span></span></div>
   <div class="fpv-inputs">
@@ -55,13 +54,14 @@
     <div class="fpv-stick"><i id="fpv-input-right"></i></div>
   </div>
 </div>
-<aside>
+<aside data-flight-ui>
   <div id="mission" role="status"></div>
 </aside>
-<dialog id="flight-plan" aria-labelledby="plan-title">
+<dialog id="flight-plan" class="township-hero" aria-labelledby="plan-title" closedby="none" open>
+  <div id="loading" role="status">Loading the Chindwin flight area…</div>
   <video id="township-promo" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
   <button id="township-promo-toggle" type="button" aria-label="Pause background video" title="Pause background video" hidden><span aria-hidden="true">Ⅱ</span></button>
-  <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" aria-label="Close flight plan">✕</button></div>
+  <div class="plan-header"><h1 id="plan-title">Flight plan</h1><button id="close-plan" hidden aria-label="Close flight plan">✕</button></div>
   <p id="recovery-message" hidden></p>
   <section id="township-step" aria-labelledby="township-label">
     <div class="township-brand" aria-label="AGL Sim">AGL <em>SIM</em></div>
@@ -73,7 +73,7 @@
       </div>
     </div>
     <div id="township-cards" aria-label="Townships">
-      <button class="township-card monywa-card" id="choose-monywa" type="button">
+      <button class="township-card monywa-card" id="choose-monywa" type="button" disabled>
         <img id="township-preview" src="./assets/monywa-clock-card-CT7q2eTp.webp" width="600" height="300" alt="Monywa Clock Tower in AGL Sim">
         <strong>Monywa Township</strong>
         <span lang="my">မုံရွာမြို့နယ်</span>
@@ -180,7 +180,7 @@
     <details id="mode-catalog"><summary>Mode catalog</summary><dl></dl></details>
   </fieldset>
 </dialog>
-<div id="touch-controls" role="group" aria-label="Mode 2 touch controls">
+<div id="touch-controls" data-flight-ui role="group" aria-label="Mode 2 touch controls">
   <div id="touch-left" class="touch-stick" aria-label="Left stick, throttle and yaw">
     <span class="stick-thumb"></span><span class="stick-label">Throttle · Yaw</span>
   </div>
@@ -188,6 +188,6 @@
     <span class="stick-thumb"></span><span class="stick-label">Pitch · Roll</span>
   </div>
 </div>
-<footer><span class="keyboard-help">W/S throttle · A/D yaw · ↑/↓ pitch · ←/→ roll</span><span>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="./data/chindwin-corridor.json" download>OSM data</a> · <a href="./data/chindwin-gloBFP-roads.json" download>Building data</a> · <a href="./credits.txt">Credits</a> · <a href="https://open-meteo.com/">Weather</a></span></footer>
+<footer data-flight-ui><span class="keyboard-help">W/S throttle · A/D yaw · ↑/↓ pitch · ←/→ roll</span><span>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="./data/chindwin-corridor.json" download>OSM data</a> · <a href="./data/chindwin-gloBFP-roads.json" download>Building data</a> · <a href="./credits.txt">Credits</a> · <a href="https://open-meteo.com/">Weather</a></span></footer>
 </body>
 </html>
