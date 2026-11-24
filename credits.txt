@@ -135,7 +135,8 @@ Minimap settlement names: © OpenStreetMap contributors, ODbL 1.0.
 The စနခ ၇၄၇ label is positioned approximately using the user-supplied map screenshot.
 
 
-Mawlaik preview streets, river polygons, settlement names and building footprints:
+Mawlaik Township boundary, streets, river polygons, settlement names and building footprints:
+https://www.openstreetmap.org/relation/5996707
 © OpenStreetMap contributors, ODbL 1.0. https://www.openstreetmap.org/copyright
-Mawlaik elevation: Copernicus DEM GLO-30, tile N23 E094, resampled in the simulator.
+Mawlaik elevation: Copernicus DEM GLO-30, tiles N23–N24 E094–E095, resampled for the township and town centre.
 Mawlaik land cover: ESA WorldCover 2021 v200. Tree placement and building heights are illustrative.
